@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CollectionViewController.h
 //  Collection
 //
 //  Created by Daniel Goncalves on 2015-05-01.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CollectionViewController : UICollectionViewController
 
 @end
-
