@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Colour.h"
 
 @interface CollectionViewController : UICollectionViewController
+
+@property (strong, nonatomic) Colour *colour;
 
 @end

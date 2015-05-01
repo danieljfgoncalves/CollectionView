@@ -7,6 +7,7 @@
 //
 
 #import "CollectionViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface CollectionViewController ()
 
@@ -26,6 +27,9 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    
+    // Instanciate the Colour Object
+    self.colour = [[Colour alloc]init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,20 +50,27 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete method implementation -- Return the number of sections
-    return 0;
+
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete method implementation -- Return the number of items in the section
-    return 0;
+
+    return self.colour.colourArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
+    cell.backgroundColor = self.colour.colourArray[indexPath.item];
+    
+    // Cell Round with Border
+    [cell.layer setCornerRadius:cell.frame.size.width / 2];
+    cell.layer.borderColor = [UIColor whiteColor].CGColor;
+    cell.layer.borderWidth = 2.0f;
+    [cell.layer setMasksToBounds:YES];
     
     return cell;
 }

@@ -14,6 +14,7 @@
 		E429AD351AF3C6AB00E0395B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E429AD331AF3C6AB00E0395B /* LaunchScreen.xib */; };
 		E429AD411AF3C6AB00E0395B /* CollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E429AD401AF3C6AB00E0395B /* CollectionTests.m */; };
 		E429AD4C1AF3C70700E0395B /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E429AD4B1AF3C70700E0395B /* CollectionViewController.m */; };
+		E429AD511AF3C82700E0395B /* Colour.m in Sources */ = {isa = PBXBuildFile; fileRef = E429AD501AF3C82700E0395B /* Colour.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		E429AD401AF3C6AB00E0395B /* CollectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionTests.m; sourceTree = "<group>"; };
 		E429AD4A1AF3C70700E0395B /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		E429AD4B1AF3C70700E0395B /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		E429AD4F1AF3C82700E0395B /* Colour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colour.h; sourceTree = "<group>"; };
+		E429AD501AF3C82700E0395B /* Colour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colour.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		E429AD231AF3C6AB00E0395B /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				E429AD4E1AF3C80E00E0395B /* Model */,
 				E429AD4D1AF3C70E00E0395B /* Controller */,
 				E429AD241AF3C6AB00E0395B /* Supporting Files */,
 			);
@@ -125,6 +129,15 @@
 				E429AD4B1AF3C70700E0395B /* CollectionViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		E429AD4E1AF3C80E00E0395B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E429AD4F1AF3C82700E0395B /* Colour.h */,
+				E429AD501AF3C82700E0395B /* Colour.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +189,7 @@
 				TargetAttributes = {
 					E429AD201AF3C6AB00E0395B = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 45U4ENPKJ6;
 					};
 					E429AD391AF3C6AB00E0395B = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -230,6 +244,7 @@
 				E429AD2A1AF3C6AB00E0395B /* AppDelegate.m in Sources */,
 				E429AD271AF3C6AB00E0395B /* main.m in Sources */,
 				E429AD4C1AF3C70700E0395B /* CollectionViewController.m in Sources */,
+				E429AD511AF3C82700E0395B /* Colour.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Collection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -365,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Collection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
